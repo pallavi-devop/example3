@@ -5,7 +5,9 @@ First install docker desktop in your windows maching
 Steps:
 Create a directory named terraform-docker-container mkdir terraform-docker-container
 Navigate to the created folder cd terraform-docker-container
-Now, create a file main.tf and paste the following code
+Now, create a file main.tf
+
+
 terraform {
   required_providers {
     docker = {
@@ -32,12 +34,16 @@ resource "docker_container" "nginx" {
     external = 8000
   }
 }
+
 Initialize the project, which downloads a plugin that allows Terraform to interact with Docker terraform init
  $ terraform init 
+ 
 Provision the NGINX server container with apply. When Terraform asks you to confirm type yes and press ENTER. terraform apply
  $ terraform apply 
+ 
 Verify the existence of the NGINX container by visiting http://localhost:8000 in your web browser or running docker ps to see the container.
  $ docker ps 
+ 
 To stop the container, run terraform destroy terraform destroy
  $ terraform destroy
  
