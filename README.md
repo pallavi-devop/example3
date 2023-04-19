@@ -1,6 +1,8 @@
-Running a nginx docker container using terraform
+#Running a nginx docker container using terraform
+Install Docker 
+Start service 
+using cmd #systemctl start docker
 Running nginx container
-First install docker desktop in your windows maching
 
 Steps:
 Create a directory named terraform-docker-container mkdir terraform-docker-container
